@@ -1,0 +1,25 @@
+v 4
+file . "inv.vhd" "5486c0a462e24c725f2c348e38d39cb599a2b401" "20240912063038.533":
+  entity inv at 1( 0) + 0 on 35;
+  architecture and_arch of inv at 10( 125) + 0 on 36;
+file . "or4.vhd" "2902a0f641a7f602355cfe7e92b7c9a71de31774" "20240912063038.532":
+  entity or4 at 1( 0) + 0 on 33;
+  architecture and_arch of or4 at 13( 194) + 0 on 34;
+file . "and3.vhd" "d8f95086bba3b2f53b84be21eba7cd2f50487f69" "20240912063038.532":
+  entity and3 at 1( 0) + 0 on 31;
+  architecture and_arch of and3 at 12( 173) + 0 on 32;
+file . "and2.vhd" "6f4242ef83eb08d9e71361f4f7e219fdc773790c" "20240912063038.531":
+  entity and2 at 1( 0) + 0 on 29;
+  architecture and_arch of and2 at 11( 150) + 0 on 30;
+file . "structural.vhd" "ff80ecaafdc98d690407635217f9789ffe64b84d" "20240912062934.472":
+  entity prime1 at 1( 0) + 0 on 25;
+  architecture prime_arch_struct of prime1 at 9( 150) + 0 on 26;
+file . "testbench.vhd" "2896f8768cf68bf1e604b16538da78102281573c" "20240912063104.933":
+  entity prime_tb at 1( 0) + 0 on 39;
+  architecture prime_tb_arch of prime_tb at 7( 78) + 0 on 40;
+file . "dataflow.vhd" "1d287f342d303791b11aad4139c4ee3bed77857a" "20240912062924.857":
+  entity prime2 at 1( 0) + 0 on 21;
+  architecture prime2_arch_datafl of prime2 at 9( 150) + 0 on 22;
+file . "behavioral.vhd" "d8539f5e9eab2e6d0ddec23d22aab7cdaa61f5c4" "20240912062930.100":
+  entity prime3 at 1( 0) + 0 on 23;
+  architecture prime_arch_beh of prime3 at 9( 150) + 0 on 24;
