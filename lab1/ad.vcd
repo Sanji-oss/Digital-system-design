@@ -1,0 +1,84 @@
+$date
+  Thu Sep 26 09:08:58 2024
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module addertest $end
+$var reg 1 ! at $end
+$var reg 1 " bt $end
+$var reg 1 # cin $end
+$var reg 1 $ sum $end
+$var reg 1 % cout $end
+$scope module u1 $end
+$var reg 1 & a $end
+$var reg 1 ' b $end
+$var reg 1 ( ci $end
+$var reg 1 ) s $end
+$var reg 1 * co $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+1!
+1"
+1#
+1$
+1%
+1&
+1'
+1(
+1)
+1*
+#100000000
+0#
+0$
+0(
+0)
+#200000000
+0"
+1#
+0'
+1(
+#300000000
+0#
+1$
+0%
+0(
+1)
+0*
+#400000000
+0!
+1"
+1#
+0$
+1%
+0&
+1'
+1(
+0)
+1*
+#500000000
+0#
+1$
+0%
+0(
+1)
+0*
+#600000000
+0"
+1#
+0'
+1(
+#700000000
+0#
+0$
+0(
+0)

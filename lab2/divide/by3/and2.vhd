@@ -12,3 +12,4 @@ architecture and_arch of AND2 is
 begin
     out1 <= in1 and in2;
 end and_arch;
+

@@ -1,5 +1,5 @@
 $date
-  Wed Sep 11 16:33:22 2024
+  Thu Sep 26 00:24:53 2024
 $end
 $version
   GHDL v0
@@ -12,12 +12,12 @@ $upscope $end
 $scope module std_logic_1164 $end
 $upscope $end
 $scope module addertest $end
-$var reg 1 ! i0 $end
-$var reg 1 " i1 $end
-$var reg 1 # i2 $end
-$var reg 1 $ o0 $end
-$var reg 1 % o1 $end
-$scope module adder1 $end
+$var reg 1 ! at $end
+$var reg 1 " bt $end
+$var reg 1 # cin $end
+$var reg 1 $ sum $end
+$var reg 1 % cout $end
+$scope module u1 $end
 $var reg 1 & a $end
 $var reg 1 ' b $end
 $var reg 1 ( ci $end
@@ -27,63 +27,62 @@ $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
-0!
-0"
-0#
-0$
-0%
-0&
-0'
-0(
-0)
-0*
-#1000000
-1#
-1%
-1(
-1)
-#2000000
+1!
 1"
-0#
-1'
-0(
-#3000000
 1#
 1$
-0%
-1(
-0)
-1*
-#4000000
-1!
-0"
-0#
-0$
 1%
 1&
+1'
+1(
+1)
+1*
+#100000000
+0#
+0$
+0(
+0)
+#200000000
+0"
+1#
+0%
 0'
+1(
+0*
+#300000000
+0#
+1$
+1%
+0(
+1)
+1*
+#400000000
+0!
+1"
+1#
+0$
+0&
+1'
+1(
+0)
+#500000000
+0#
+1$
+0%
 0(
 1)
 0*
-#5000000
-1#
-1$
-0%
-1(
-0)
-1*
-#6000000
-1"
-0#
-1'
-0(
-#7000000
+#600000000
+0"
 1#
 1%
+0'
 1(
-1)
-#8000000
+1*
+#700000000
 0#
+0$
 0%
 0(
 0)
+0*

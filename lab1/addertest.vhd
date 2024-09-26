@@ -1,25 +1,33 @@
--- Ying Li
- -- A testbench for the full adder
- library ieee;
- use ieee.std_logic_1164.all;
- -- A testbench has no ports
+library ieee;
+use ieee.std_logic_1164.all;
+
 entity addertest is end addertest;
 architecture behavior of addertest is
--- Declaration of the component that will be instantiated 
-component adder
-        port(
-             A, B, Ci: in std_logic;
-             S, Co: out std_logic
-        );
+     component full_adder port(
+               A, B, Ci: in std_logic;
+               S, Co: out std_logic);
      end component;
-     -- the adder signals
-     signal I0, I1, I2, O0, O1 : std_logic;
+     signal AT, BT, Cin:  std_logic;
+     signal  Sum, Cout: std_logic;
 begin
--- component instantiation
--- connect the inputs and outputs of the entity to the local signals 
-    adder1 : adder port map (A=>I0, B=>I1, Ci=>I2, Co=>O0, S=>O1);
-    I0 <= '0', '1' after 4 ns; -- send signals to port a, the signal is 0 in the first 4 ns and 1 afterward
-            I1 <= '0', '1' after 2 ns, '0' after 4 ns, '1' after 6 ns;
-            I2 <= '0', '1' after 1 ns, '0' after 2 ns, '1' after 3 ns, '0' after 4 ns, '1' after 5
-     ns, '0' after 6 ns, '1' after 7 ns, '0' after 8 ns;
+     U1: full_adder port map(A=>At, B=>Bt, Ci=>Cin, S=>Sum, Co=>Cout);
+     process
+     begin
+          AT <= '1';BT <= '1';Cin <= '1';
+          wait for 100 ns; 
+          AT <= '1';BT <= '1';Cin <= '0';
+          wait for 100 ns; 
+          AT <= '1';BT <= '0';Cin <= '1';
+          wait for 100 ns;
+          AT <= '1';BT <= '0';Cin <= '0';
+          wait for 100 ns;
+          AT <= '0';BT <= '1';Cin <= '1';
+          wait for 100 ns;   
+          AT <= '0';BT <= '1';Cin <= '0';
+          wait for 100 ns;
+          AT <= '0';BT <= '0';Cin <= '1';
+          wait for 100 ns;
+          AT <= '0';BT <= '0';Cin <= '0';
+          wait ;
+    end process;
 end behavior;
