@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity addertest is end addertest;
-architecture behavior of addertest is
+architecture structural of addertest is
      component full_adder port(
                A, B, Ci: in std_logic;
                S, Co: out std_logic);
@@ -30,4 +30,4 @@ begin
           AT <= '0';BT <= '0';Cin <= '0';
           wait ;
     end process;
-end behavior;
+end structural;

@@ -8,7 +8,6 @@ end prime2;
 
 architecture prime2_arch_datafl of prime2 is
 begin
-   -- Dataflow description using Boolean equations\
 with N select	
   F <= '1' when "0011",
  	'1' when "0110", 

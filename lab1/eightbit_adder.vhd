@@ -7,7 +7,7 @@ entity eightbit_adder is
         S : out std_logic_vector(7 downto 0);
         Co: out std_logic);
 end eightbit_adder;
-architecture behavioral of eightbit_adder is 
+architecture structural of eightbit_adder is 
 component full_adder
 port (
     A, B, Ci: in std_logic;
@@ -23,4 +23,4 @@ begin
     FA6: full_adder  port map( A(5), B(5), c(4), S(5), c(5));
     FA7: full_adder  port map( A(6), B(6), c(5), S(6), c(6));
     FA8: full_adder  port map( A(7), B(7), c(6), S(7), Co);
-end behavioral;
+end structural;

@@ -7,7 +7,6 @@ entity prime3 is
 end prime3;
 
 architecture prime_arch_beh of prime3 is
-   -- Function to convert STD_LOGIC_VECTOR to INTEGER
    function CONV_INTEGER (X: STD_LOGIC_VECTOR) return INTEGER is
       variable RESULT: INTEGER := 0;
    begin
@@ -19,17 +18,15 @@ architecture prime_arch_beh of prime3 is
       end loop;
       return RESULT;
    end function;
-
-begin
-   -- Behavioral description using a process block
-   process(N)
-      variable NI: INTEGER;
    begin
-      NI := CONV_INTEGER(N);  -- Convert binary input to integer
-      if NI = 3 or NI = 6 or NI = 9 or NI = 12 or NI = 15 then
-         F <= '1';
-      else
-         F <= '0';
-      end if;
-   end process;
+      process(N)
+         variable NI: INTEGER;
+      begin
+         NI := CONV_INTEGER(N);
+         if NI = 3 or NI = 6 or NI = 9 or NI = 12 or NI = 15 then
+            F <= '1';
+         else
+            F <= '0';
+         end if;
+      end process;
 end prime_arch_beh;

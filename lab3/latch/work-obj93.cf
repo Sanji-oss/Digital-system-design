@@ -1,0 +1,10 @@
+v 4
+file . "ifwol.vhd" "c142a49c66642466a716427fc291588f0ae5469a" "20240926065934.231":
+  entity ifwol at 1( 0) + 0 on 19;
+  architecture ifwol_arch of ifwol at 13( 276) + 0 on 20;
+file . "latch.vhd" "439578ae17cd9d0c3a066254dd5d72f127e6a64c" "20240926065616.903":
+  entity latch at 1( 0) + 0 on 11;
+  architecture latch_arch of latch at 10( 165) + 0 on 12;
+file . "ifwlatch.vhd" "5dafc85a950b7ff4eae5567fad57e5d97d041eb3" "20240926065924.785":
+  entity ifwlatch at 1( 0) + 0 on 17;
+  architecture ifwl_arch of ifwlatch at 13( 282) + 0 on 18;

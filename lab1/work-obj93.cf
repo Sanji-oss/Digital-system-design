@@ -5,15 +5,15 @@ file . "multitest.vhd" "944663a499f4e135fb30947a327429773d16126d" "2024092406205
 file . "addertest.vhd" "e63582eefd5255cdfc3acc5707ff3c0549d26ca8" "20240926010738.008":
   entity addertest at 1( 0) + 0 on 51;
   architecture behavior of addertest at 5( 79) + 0 on 52;
-file . "adder.vhd" "18fa6bed5923c5a9417eb3c04878432e4ceb5ec0" "20240926011301.287":
-  entity full_adder at 1( 0) + 0 on 53;
-  architecture behavior of full_adder at 9( 145) + 0 on 54;
+file . "adder.vhd" "1b262f5324f6c0bdb754f8cd9ac41565fda6bb8a" "20240926045356.867":
+  entity full_adder at 1( 0) + 0 on 61;
+  architecture structural of full_adder at 9( 145) + 0 on 62;
 file . "multiplexer.vhd" "74fff2d7921f9c7fb4671541adc2f927c476b0ae" "20240924062050.181":
   entity mux2to1 at 1( 0) + 0 on 15;
   architecture mux_arch of mux2to1 at 11( 150) + 0 on 16;
 file . "eightbit_adder.vhd" "24a1276f3706289220c23fca18a025c24a36994a" "20240926011301.289":
   entity eightbit_adder at 1( 0) + 0 on 55;
   architecture behavioral of eightbit_adder at 10( 248) + 0 on 56;
-file . "eightbit_fulladder_testbench.vhd" "4584af6d61646127eab5d9857495af09de46a983" "20240926011301.289":
-  entity adder_tb at 1( 0) + 0 on 57;
-  architecture behavioral of adder_tb at 6( 78) + 0 on 58;
+file . "eightbit_fulladder_testbench.vhd" "35f71c8d11f54a555c60be2d431ab7c66862047c" "20240926024006.108":
+  entity adder_tb at 1( 0) + 0 on 59;
+  architecture behavioral of adder_tb at 6( 78) + 0 on 60;

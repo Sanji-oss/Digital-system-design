@@ -1,46 +1,34 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity boolean_function is
-    Port ( A : in STD_LOGIC;
-           B : in STD_LOGIC;
-           C : in STD_LOGIC;
-           D : in STD_LOGIC;
-           F : out STD_LOGIC);
-end boolean_function;
+entity divider is
+    port ( N: in  STD_LOGIC_VECTOR(3 DOWNTO 0);
+          F: out STD_LOGIC);
+end divider;
 
-architecture Structural of boolean_function is
-
-    -- Intermediate signals for NOT gates
-    signal A_bar, B_bar, C_bar, D_bar : STD_LOGIC;
-    
-    -- Intermediate signals for AND and OR results
-    signal CD, BD_bar, CD_or_BD_bar : STD_LOGIC;
-    signal A_bar_and_CD_or_BD_bar : STD_LOGIC;
-    signal AB_barC_bar : STD_LOGIC;
-    signal ABCD : STD_LOGIC;
-
+architecture divider_arch of divider is
+    signal notand_a, notand_b, notand_c, notand_d:std_logic;
+    signal out_a, out_b, out_c, out_d, out_e:std_logic;
+    component INV
+      port(in1: in STD_LOGIC; out1: out STD_LOGIC);
+   end component;
+   component and4
+      port(in1, in2, in3, in4: in STD_LOGIC; out1: out STD_LOGIC);
+   end component;
+   component or5
+      port(in1, in2, in3, in4, in5: in STD_LOGIC; out1: out STD_LOGIC);
+   end component;
 begin
+    U1: INV port map(N(0), notand_a);
+    U2: INV port map(N(1), notand_b);
+    U3: INV port map(N(2), notand_c);
+    U4: INV port map(N(3), notand_d);
+    
+    F1: and4 port map(notand_a, notand_b, N(2), N(3), out_a);
+    F2: and4 port map(notand_a, N(1), N(2), notand_d, out_b);
+    F3: and4 port map(N(0), notand_b, notand_c, N(3), out_c);
+    F4: and4 port map(N(0), N(1), notand_c, notand_d, out_d);
+    F5: and4 port map(N(0), N(1), N(2), N(3), out_e);
 
-    -- NOT gates
-    A_bar <= not A;
-    B_bar <= not B;
-    C_bar <= not C;
-    D_bar <= not D;
-
-    -- AND gates
-    CD <= C and D;                        -- for CD
-    BD_bar <= B and D_bar;                -- for BD̅
-    AB_barC_bar <= A and B_bar and C_bar;  -- for AB̅C̅
-    ABCD <= A and B and C and D;           -- for ABCD
-
-    -- OR gate for CD + BD̅
-    CD_or_BD_bar <= CD or BD_bar;
-
-    -- AND gate for A̅(CD + BD̅)
-    A_bar_and_CD_or_BD_bar <= A_bar and CD_or_BD_bar;
-
-    -- OR gate to combine the terms
-    F <= A_bar_and_CD_or_BD_bar or AB_barC_bar or ABCD;
-
-end Structural;
+    E1: or5 port map(out_a, out_b, out_c, out_d, out_e, F);
+end divider_arch;

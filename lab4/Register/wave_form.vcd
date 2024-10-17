@@ -1,0 +1,121 @@
+$date
+  Thu Oct  3 14:38:13 2024
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module tb_rg_4 $end
+$var reg 1 ! clk $end
+$var reg 1 " clear $end
+$var reg 4 # d[3:0] $end
+$var reg 4 $ q[3:0] $end
+$scope module uut $end
+$var reg 1 % clk $end
+$var reg 1 & clear $end
+$var reg 4 ' d[3:0] $end
+$var reg 4 ( q[3:0] $end
+$var reg 4 ) q_i[3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+0"
+bUUUU #
+bUUUU $
+0%
+0&
+bUUUU '
+bUUUU (
+b0000 )
+#5000000
+1!
+b0000 $
+1%
+b0000 (
+#10000000
+0!
+0%
+#15000000
+1!
+1%
+#20000000
+0!
+1"
+b1010 #
+0%
+1&
+b1010 '
+#25000000
+1!
+1%
+b1010 )
+#30000000
+0!
+b1100 #
+b1010 $
+0%
+b1100 '
+b1010 (
+#35000000
+1!
+1%
+b1100 )
+#40000000
+0!
+0"
+b1100 $
+0%
+0&
+b1100 (
+b0000 )
+#45000000
+1!
+b0000 $
+1%
+b0000 (
+#50000000
+0!
+1"
+b0111 #
+0%
+1&
+b0111 '
+#55000000
+1!
+1%
+b0111 )
+#60000000
+0!
+b0111 $
+0%
+b0111 (
+#65000000
+1!
+1%
+#70000000
+0!
+0%
+#75000000
+1!
+1%
+#80000000
+0!
+0%
+#85000000
+1!
+1%
+#90000000
+0!
+0%
+#95000000
+1!
+1%
+#100000000

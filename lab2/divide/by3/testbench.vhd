@@ -5,7 +5,7 @@ entity prime_tb is
 end prime_tb;
 
 architecture prime_tb_arch of prime_tb is
-   component prime1
+   component divider
       port ( N: in  STD_LOGIC_VECTOR(3 DOWNTO 0);
              F: out STD_LOGIC);
    end component;
@@ -21,13 +21,10 @@ architecture prime_tb_arch of prime_tb is
    signal NT : STD_LOGIC_VECTOR(3 DOWNTO 0);
    signal FT1, FT2, FT3: STD_LOGIC;
 begin
-   -- Instantiate the prime number detector
-   UU1: prime1 port map (NT, FT1);
+   UU1: divider port map (NT, FT1);
    UU2: prime2 port map (NT, FT2);
    UU3: prime3 port map (NT, FT3);
-
-   -- Stimulus process
-   process
+process
    begin
       NT <= "0000"; wait for 10 ns;
       NT <= "0001"; wait for 10 ns;

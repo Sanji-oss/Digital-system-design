@@ -1,0 +1,13 @@
+v 4
+file . "tb_srg_4.vhd" "d91bb789074fd5eab543dcdfe61e2a4e2ebe86ff" "20241003070426.494":
+  entity tb_srg_4 at 1( 0) + 0 on 49;
+  architecture behavior of tb_srg_4 at 7( 78) + 0 on 50;
+file . "shift_register.vhd" "edbbf95b18c767e9d21f03dc2ca1c5722d61c502" "20241003070426.494":
+  entity srg_4 at 1( 0) + 0 on 47;
+  architecture behavioral of srg_4 at 10( 175) + 0 on 48;
+file . "4bit_register.vhd" "5733c64b68c19b684fb453ecacacd8d99fd9d836" "20241003063725.384":
+  entity rg_4 at 1( 0) + 0 on 33;
+  architecture behavioral of rg_4 at 10( 186) + 0 on 34;
+file . "testbench.vhd" "19ded78e3cd47183dd74d26de6270e1bfba1f7bb" "20241003063926.456":
+  entity tb_rg_4 at 1( 0) + 0 on 37;
+  architecture behavior of tb_rg_4 at 7( 76) + 0 on 38;

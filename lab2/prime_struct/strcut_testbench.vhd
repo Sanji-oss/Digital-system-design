@@ -25,13 +25,10 @@ architecture prime_tb_arch of prime_tb is
    signal NT : STD_LOGIC_VECTOR(3 DOWNTO 0);
    signal FT1, FT2, FT3, FT4: STD_LOGIC;
 begin
-   -- Instantiate the prime number detector
    UU1: prime1 port map (NT, FT1);
    UU2: prime1 port map (NT, FT2);
    UU3: prime1 port map (NT, FT3);
    UU4: prime1 port map (NT, FT4);
-
-   -- Stimulus process
    process
    begin
       NT <= "0000"; wait for 10 ns;
