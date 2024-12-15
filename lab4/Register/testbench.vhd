@@ -6,7 +6,6 @@ end tb_rg_4;
 
 architecture behavior of tb_rg_4 is
 
-    -- Signal declarations
     signal clk   : std_logic := '0';
     signal clear : std_logic := '1';
     signal D     : std_logic_vector(3 downto 0);
@@ -16,7 +15,6 @@ architecture behavior of tb_rg_4 is
 
 begin
 
-    -- Instantiate the Unit Under Test (UUT)
     UUT: entity work.rg_4
         port map (
             clk => clk,
@@ -49,7 +47,6 @@ begin
 
         clear <= '0';  
         wait for 10 ns;
-
         clear <= '1';
         D <= "0111"; 
         wait for 10 ns;

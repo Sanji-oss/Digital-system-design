@@ -8,7 +8,9 @@ port(clk, clear: in std_logic;
 end rg_4;
 
 architecture behavioral of rg_4 is 
+
 signal Q_i: std_logic_vector(3 downto 0);
+
 begin 
     process(clk, clear)
     begin

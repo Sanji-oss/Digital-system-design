@@ -1,0 +1,7 @@
+v 4
+file . "seq_rec_tb.vhd" "33ca7463cecc3dda18e99d51f267474e8cea17ce" "20241114062722.420":
+  entity tb_seq_rec at 1( 0) + 0 on 13;
+  architecture behavior of tb_seq_rec at 7( 82) + 0 on 14;
+file . "seq_rec.vhd" "d520a21b3f7b088da26fbd94e2282a7a60e8c0fc" "20241114054547.490":
+  entity seq_rec at 1( 0) + 0 on 11;
+  architecture process_3 of seq_rec at 9( 142) + 0 on 12;
